@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX | Pioneering Space Exploration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+            background: linear-gradient(to top, #000000, #001f3f);
+            overflow-x: hidden;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 100;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 24px;
+            color: #f5f5f5;
+        }
+
+        header nav a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: #ffffff;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        header nav a:hover {
+            color: #f54242;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('https://www.spacex.com/static/images/share.jpg') center/cover no-repeat;
+            animation: fadeIn 2s ease-in-out;
+            position: relative;
+            color: #ffffff;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero div {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 64px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            animation: slideInDown 1.5s ease-out;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin: 20px 0;
+            max-width: 600px;
+            animation: slideInUp 1.5s ease-out;
+        }
+
+        .hero .cta {
+            padding: 15px 40px;
+            background-color: #f54242;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            box-shadow: 0 0 20px rgba(245, 66, 66, 0.5);
+            animation: pulse 1.5s infinite;
+        }
+
+        .hero .cta:hover {
+            background-color: #ff5555;
+        }
+
+        .info-section {
+            padding: 100px 50px;
+            text-align: center;
+        }
+
+        .info-section h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+
+        .info-section p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .grid-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 50px;
+        }
+
+        .card {
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ffcc00;
+        }
+
+        .card p {
+            font-size: 16px;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #000000;
+            color: #777777;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(245, 66, 66, 0.5);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 30px rgba(245, 66, 66, 0.7);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SpaceX</h1>
+        <nav>
+            <a href="#mission">Mission</a>
+            <a href="#launches">Launches</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h2>Explore the Stars</h2>
+            <p>Join SpaceX in our mission to pioneer space travel, innovate technology, and take humanity to new frontiers.</p>
+            <button class="cta">Discover More</button>
+        </div>
+    </section>
+
+    <section id="mission" class="info-section">
+        <h2>Our Mission</h2>
+        <p>SpaceX is revolutionizing space exploration. With cutting-edge technology and reusable rockets, we aim to make interplanetary travel a reality.</p>
+    </section>
+
+    <section id="launches" class="grid-section">
+        <div class="card">
+            <h3>Falcon 9</h3>
+            <p>The first reusable orbital-class rocket, designed for reliable and cost-efficient launches.</p>
+        </div>
+        <div class="card">
+            <h3>Starship</h3>
+            <p>The spacecraft that will take humanity to Mars and beyond, capable of carrying both crew and cargo.</p>
+        </div>
+        <div class="card">
+            <h3>Dragon</h3>
+            <p>A spacecraft designed to carry humans to space and safely return them to Earth.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 SpaceX. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
